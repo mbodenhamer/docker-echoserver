@@ -1,5 +1,8 @@
 FROM mbodenhamer/alpine-flask:latest
 MAINTAINER Matt Bodenhamer <mbodenhamer@mbodenhamer.com>
 
-COPY docker-entrypoint.py /docker-entrypoint.py
-ENTRYPOINT ["python", "/docker-entrypoint.py"]
+COPY docker-entrypoint.sh /docker-entrypoint.sh
+COPY serve.py /serve.py
+
+WORKDIR /
+ENTRYPOINT ["/docker-entrypoint.sh"]
