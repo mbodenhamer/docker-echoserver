@@ -8,7 +8,7 @@ from gevent.server import StreamServer
 # https://github.com/gevent/gevent/blob/master/examples/echoserver.py
 def echo(socket, address):
     print('New connection from %s:%s' % address)
-    socket.sendall(b'Welcome to the echo server! Type quit to exit.\r\n')
+    #socket.sendall(b'Welcome to the echo server! Type quit to exit.\r\n')
     # using a makefile because we want to use readline()
     rfileobj = socket.makefile(mode='rb')
     while True:
