@@ -1,3 +1,5 @@
+[![](https://travis-ci.org/mbodenhamer/docker-echoserver.svg?branch=master)](https://travis-ci.org/mbodenhamer/docker-echoserver)
+
 A dockerized echo server using [gevent](http://www.gevent.org/).
 
 ## Usage
