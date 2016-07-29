@@ -12,12 +12,13 @@ if [ -z "$@" ]; then
 
     PORTS=${LISTEN_PORTS:-5000}
     for port in $(echo $PORTS | sed "s/,/ /g"); do
+	echo "Starting server on port $port"
     	python serve.py $port &
 	SERVERS[$port]=$!
     done
 
     while true; do
-    	sleep 1
+    	sleep 0.1
     done
 fi
 
