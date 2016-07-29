@@ -23,6 +23,10 @@ test-shell:
 quick-test:
 	$(TEST) bats tests
 
+example:
+	docker run -d --name echo -e LISTEN_PORTS=5000,5001 \
+	    -p 5000:5000 -p 5001:5001 $(IMAGE)
+
 test:
 	$(MAKE) build
 	$(MAKE) quick-test
